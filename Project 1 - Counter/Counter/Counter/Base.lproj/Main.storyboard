@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="143" id="GRy-wd-e39"/>
                                     <constraint firstAttribute="width" constant="235" id="uEK-hf-Cnk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="150"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="150"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
