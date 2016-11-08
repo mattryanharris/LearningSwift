@@ -21,5 +21,15 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var counter: UILabel!
+    var count: Int = 0
+    @IBAction func incrementer(_ sender: Any) {
+        count += 1
+        counter.text = String(count)
+    }
+    @IBAction func reset(_ sender: Any) {
+        count = 0
+        counter.text = String(count)
+    }
 }
 
