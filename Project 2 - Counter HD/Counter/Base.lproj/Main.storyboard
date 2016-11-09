@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKf-sD-KEc">
+                                <rect key="frame" x="70" y="287" width="235" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="9Zd-Xo-AcS"/>
+                                    <constraint firstAttribute="width" constant="235" id="RnF-23-in9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2n-B5-B14">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                <color key="backgroundColor" red="0.91108895614357188" green="0.91108895614357188" blue="0.91108895614357188" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Counter" prompt=" " id="N2L-xc-Yel">
+                                        <barButtonItem key="leftBarButtonItem" title="Reset" style="plain" id="PrQ-8z-nTn">
+                                            <connections>
+                                                <action selector="reset:" destination="BYZ-38-t0r" id="h7m-H4-JNL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-yE-7f9">
+                                <rect key="frame" x="118" y="450" width="139" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="6TC-7T-HGO"/>
+                                    <constraint firstAttribute="height" constant="60" id="dX5-nF-fD1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Tap or Hold"/>
+                                <connections>
+                                    <action selector="incrementer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibT-jR-myU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P2n-B5-B14" secondAttribute="trailing" id="3Ti-Ok-rW9"/>
+                            <constraint firstItem="BKf-sD-KEc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="7VB-vT-ZZe"/>
+                            <constraint firstItem="P2n-B5-B14" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Xr-4e-hSB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ogf-yE-7f9" secondAttribute="bottom" constant="226" id="Elh-jo-70F"/>
+                            <constraint firstItem="ogf-yE-7f9" firstAttribute="centerX" secondItem="BKf-sD-KEc" secondAttribute="centerX" id="N4k-rH-kee"/>
+                            <constraint firstAttribute="trailing" secondItem="BKf-sD-KEc" secondAttribute="trailing" constant="70" id="SNw-6h-RY2"/>
+                            <constraint firstItem="P2n-B5-B14" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="egR-AT-NaA"/>
+                            <constraint firstItem="ogf-yE-7f9" firstAttribute="top" secondItem="BKf-sD-KEc" secondAttribute="bottom" constant="20" id="ixX-aA-CJL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="ogf-yE-7f9" id="Yd7-hZ-OPp"/>
+                        <outlet property="counter" destination="BKf-sD-KEc" id="DFX-8P-3gM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+</document>
